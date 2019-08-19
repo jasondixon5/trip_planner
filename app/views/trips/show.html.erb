@@ -9,6 +9,8 @@
 
 <h3>Activities</h3>
 
+<%= render @trip.activities %>
+
 <h4>New Activity</h4>
 <%= form_for [@trip, @trip.activities.build] do |f| %>
   <div class='field'>
@@ -26,5 +28,4 @@
   </div>
   <% end %>
 
-<%= render @trip.activities %>
 
