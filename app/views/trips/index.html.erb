@@ -6,8 +6,9 @@
 <h2><%= link_to trip.name, trip %></h2>
 <p><i><%= trip.start_date %></i></p>
 <p><%= link_to 'Show', trip %></p>
-<p><%= link_to 'Edit', edit_trip_path(trip) %></p>>
+<p><%= link_to 'Edit', edit_trip_path(trip) %></p>
 <p><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<br>
 <% end %>
 
 <br>

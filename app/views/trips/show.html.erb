@@ -2,11 +2,29 @@
 
 <h2><%= @trip.name %></h2>
 
-<p><%= @trip.body %></p>
+<p><%= @trip.start_date %></p>
 
-<%= link_to 'Edit Trip', edit_trip_path(@trip) %> |
+<%= link_to 'Edit Trip', edit_trip_path(@trip) %> 
 <%= link_to 'Back', trips_path %>
 
 <h3>Activities</h3>
 
+<h4>New Activity</h4>
+<%= form_for [@trip, @trip.activities.build] do |f| %>
+  <div class='field'>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class='field'>
+  <%= f.label :where %><br>
+  <%= f.text_field :name %>
+  </div>
+
+  <div class='actions'>
+    <%= f.submit %>
+  </div>
+  <% end %>
+
 <%= render @trip.activities %>
+
