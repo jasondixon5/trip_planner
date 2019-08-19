@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :trips do
     resources :activities
   end
+root 'trips#index'
 end
